@@ -7,3 +7,8 @@ public class Main{
   System.out.println((w!=2)&&(w % 2) == 0 ? "YES" : "NO");	
 	}
 }
+
+
+//Python
+w = int(input().strip())
+print("YES" if (w!=2) and (w%2==0) else "NO")
