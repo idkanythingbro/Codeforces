@@ -1,0 +1,12 @@
+//Java
+import java.util.*;
+public class Main{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String args[]){
+		long m = sc.nextLong();
+		long n = sc.nextLong();
+		long a = sc.nextLong();
+		long ans = ((m/a) + (m%a!=0 ? 1 : 0)) * ((n/a) + (n%a!=0 ? 1 : 0));
+		System.out.println(ans);
+	}	
+}
