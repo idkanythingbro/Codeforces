@@ -1,0 +1,30 @@
+//Java
+import java.io.*;
+import java.util.*;
+public class Main{
+	public static void main(String args[]) throws Exception {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	int r=0, c=0;
+	for(int i=1;i<=5;i++){
+		String row = br.readLine();
+		row = row.replaceAll("\\s+", "");
+		int idx = row.indexOf('1');
+		if(idx != -1){
+			c = idx + 1;
+			r = i;
+		}
+	}
+	System.out.println(Math.abs(r - 3) + Math.abs(c - 3));
+	}
+}
+
+//Python
+r = 0
+c = 0
+for i in range(5):
+	s = "".join(input().split())
+	idx = s.find('1')
+	if idx != -1:
+		r = i + 1
+		c = idx + 1
+print(abs(3 - r) + abs(3 - c))
