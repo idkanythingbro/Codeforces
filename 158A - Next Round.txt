@@ -1,0 +1,35 @@
+//Java
+import java.util.*;
+public class Main{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String args[]){
+		int n = sc.nextInt();
+		int k = sc.nextInt();
+		List<Integer> list = new ArrayList<>();
+		for(int i=0;i<n;i++){
+			list.add(sc.nextInt());
+		}
+		System.out.println(nextRound(list, k));
+	}
+	private static int nextRound(List<Integer> list, int k){
+		int n = list.size();
+		int idx = k - 1;
+		if(list.get(idx) < 1){
+		    while((idx >= 0) && (list.get(idx) < 1)){
+		        idx--;
+		    }
+		} else {
+			while((idx < list.size() - 1) && (list.get(idx) == list.get(idx + 1))){
+			    idx++;
+			}
+		}
+		return idx + 1;
+	}
+}
+
+
+//Python
+n, k = map(int, input().split())
+arr = list(map(int, input().split()))
+ 
+print(sum(x >= arr[k - 1] and x > 0 for x in arr))
