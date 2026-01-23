@@ -1,0 +1,18 @@
+//Java
+import java.io.*;
+import java.util.*;
+public class Main{
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s = br.readLine().toLowerCase();
+		StringBuilder sb = new StringBuilder();
+		for(char c : s.toCharArray()){
+			if(!(c == 'a' || c == 'o' || c == 'y' || c =='e' || c == 'u' || c=='i')){
+				sb.append('.').append(c);
+			}
+		}
+		System.out.println(sb.toString());
+	}
+}
+
+#Python
