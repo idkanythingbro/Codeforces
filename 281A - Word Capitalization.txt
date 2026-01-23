@@ -1,0 +1,17 @@
+//Java
+import java.io.*;
+import java.util.*;
+public class Main{
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s = br.readLine();
+		System.out.println(Character.toUpperCase(s.charAt(0)) + s.substring(1));
+	}
+}
+
+
+
+#Python
+s = input().strip()
+if s:
+	print(s[0].upper() + s[1:])
