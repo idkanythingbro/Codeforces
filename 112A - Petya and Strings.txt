@@ -1,0 +1,24 @@
+//Java
+import java.io.*;
+import java.util.*;
+public class Main{
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s1 = br.readLine().toLowerCase();
+		String s2 = br.readLine().toLowerCase();
+		if((s1).compareTo(s2) == 0){
+			System.out.println(0);
+		} else if((s1).compareTo(s2) > 0){
+			System.out.println(1);
+		} else{
+			System.out.println(-1);
+		}
+		
+	}
+}
+
+//Python
+s1 = input().lower()
+s2 = input().lower()
+
+print((s1 > s2) - (s1 < s2))
