@@ -1,0 +1,18 @@
+//Java
+import java.io.*;
+import java.util.*;
+public class Main{
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s = br.readLine();
+		Set<Character> set = new HashSet<>();
+		for(char c : s.toCharArray()){
+			set.add(c);
+		}
+		System.out.println((set.size() % 2) != 0 ? "IGNORE HIM!" : "CHAT WITH HER!");
+	}
+}
+
+#Python
+s = input().strip()
+print("CHAT WITH HER!" if len(set(s)) % 2 == 0 else "IGNORE HIM!")
