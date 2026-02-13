@@ -10,24 +10,6 @@ public class Main{
 		}
 		out.close();
 	}
-
-	static int sumOfDigits(long num){
-		int sum = 0;
-		long absNo = Math.abs(num); 
-		while(absNo > 0){
-			sum += absNo % 10;
-			absNo/=10;
-		}
-		return sum;
-	}
-
-	static void swapValues(int[] arr, int i, int j){
-		if(i == j) return;
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-	}
-
 	static void solve(FastReader in, PrintWriter out) {
 		int n = in.nextInt();
 		int[] arr = new int[n + 1];
